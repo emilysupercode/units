@@ -11,7 +11,10 @@ h1 {
 }
 
 /* setting html fz simplifies use of rem
-62.5% is 0.625 of 16 = 10px */
+62.5% is 0.625 of 16 = 10px 
+
+prozente beziehen sich auf dem Browser Zoom*/
+
 html {
     font-size: 10px;
     font-size: 62.5%;
@@ -95,5 +98,36 @@ div:nth-of-type(3) {
 vw is NOT useful for using the complete width because of the standard margin*/
 
 div:nth-of-type(1) {
-    /* width: 100vw; NIE weil hiermit horizontalscroll */
+    width: 100vw;
+    /* NIE weil hiermit horizontalscroll */
+}
+
+/* % bezieht sich immer auf die breite des parentcontainers 
+unstyled, Bilder behalten immer die originalegröße bei
+styling with %, then % of parentcontainer
+weil bilder inlinecontainer sind, werden die dann nebeneinander sitzen, wenn die gesamte breite zusammen nicht breiter als dem parentcontainer ist; use display block to prevent that
+when the width or height of a photo is changed the ratio remains the same
+
+photos have an automatic Abstand top/bottom  */
+
+section {
+    background-color: yellow;
+    width: 50%;
+}
+
+section img:nth-of-type(1) {
+    width: 100%;
+}
+
+section img:nth-of-type(2) {
+    width: 75%;
+}
+
+section img:nth-of-type(3) {
+    width: 50%;
+}
+
+section img:nth-of-type(4) {
+    width: 25%;
+    display: block;
 }
