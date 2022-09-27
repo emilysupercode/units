@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
 }
@@ -70,4 +70,30 @@ article p:nth-of-type(3) {
 article p:nth-of-type(4) {
     font-size: 0.75rem;
     /* 7.5 px */
+}
+
+/* vh = viewheight port -> bezieht sich auf die browser (oder ansichtsfenster) höhe ... allows you to keep elements in the same relative position to one another regardless of the screen size*/
+
+div:nth-of-type(1) {
+    background-color: yellow;
+    margin-bottom: 5vh;
+    height: 10vh;
+}
+
+div:nth-of-type(2) {
+    background-color: red;
+    margin-bottom: 10vh;
+    height: 10vh;
+}
+
+div:nth-of-type(3) {
+    background-color: brown;
+    height: 10vh;
+}
+
+/* vw = viewwidth port -> bezieht sich auf die browser breite 
+vw is NOT useful for using the complete width because of the standard margin*/
+
+div:nth-of-type(1) {
+    /* width: 100vw; NIE weil hiermit horizontalscroll */
 }
