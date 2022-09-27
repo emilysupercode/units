@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Absolute Unit */
+/* 1px ist immer 1px */
+h1 {
+    font-size: 60px;
+}
+
+/* setting html fz simplifies use of rem
+62.5% is 0.625 of 16 = 10px */
+html {
+    font-size: 10px;
+    font-size: 62.5%;
+}
+
+section {
+    font-size: 16px;
+    /* if this fz is changed it affects all the children */
+}
+
+/* Relative Units */
+/* em / rem / vw / vh / % */
+/* don't use both rem and em in one file; it works but isn't good practice */
+
+/* em bezieht sich auf den parentcontainer */
+
+p {
+    margin: 20px 0;
+    font-size: 1em;
+    /* 16px*/
+}
+
+section p:nth-of-type(2) {
+    font-size: 2em;
+    /* 32px  */
+}
+
+section p:nth-of-type(3) {
+    font-size: 2.5em;
+    /* 40px  */
+}
+
+section p:nth-of-type(4) {
+    font-size: 4em;
+    /* 64px  */
+}
+
+/* rem bezieht sich auf das Root Element = html 
+for this reason it's common to set html fz to 10px for easy math*/
+
+article p:nth-of-type(1) {
+    font-size: 2rem;
+    /* 20 px */
+}
+
+article p:nth-of-type(2) {
+    font-size: 6rem;
+    /* 60 px */
+}
+
+article p:nth-of-type(3) {
+    font-size: 0.5rem;
+    /* 5 px */
+}
+
+article p:nth-of-type(4) {
+    font-size: 0.75rem;
+    /* 7.5 px */
+}
